@@ -1,0 +1,22 @@
+
+.fixed {
+    position: fixed;
+    z-index: 99;
+    height: 50px;
+}
+
+.besar {
+    height: 50px;
+}
+
+.text {
+    color: white;
+    font-size: 25px;
+}
+.tokoonline {
+    background-color: #0b758a;
+}
+
+.home {
+    background-color: #1eabbd;
+}

@@ -1,0 +1,48 @@
+{%  extends 'base/base.html'  %}
+{%  load static  %}
+
+{%  block title  %} Home {%  endblock  %}
+
+
+{%  block content  %}
+
+
+<body>
+        <br>
+
+                <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row justify-content-center">
+                                    {%  for barang in barangs  %}
+                                    <div class="col-4 text-left">
+                                        <table class="kotak border border-grey">
+                                            <tr>
+                                                <td>
+                                                    <img src="{{  barang.foto  }}" width="400px" height="220px" alt="">
+                                                    <br><br>
+                                                    <h4>{{  barang.nama  }}</h4>
+                                                    <br>
+                                                    <h5>{{  barang.harga  }}</h5>
+                                                    <br>
+                                                    <a href="{% url 'barang_detail' barang.id %}">Lihat Details</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                    </div>
+                                    {%  endfor  %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <br>
+        <br>
+        <div class="text-center">
+            <button type="button" onclick="window.location.href= '{%  url 'inputbarang' %}' " class="btn btn-primary">Tambah Barang</button>
+        </div>
+        
+        <br>
+
+{%  endblock  %}

@@ -1,0 +1,20 @@
+{%  extends 'base/base.html'  %}
+{%  load static  %}
+
+{%  block title  %} input_barang {%  endblock  %}
+
+{% block content  %}
+
+<div class="text-center">
+    <br>
+    <h2>New Barang</h2>
+
+    <form method="POST" class="Barang-form">{% csrf_token %}
+        {{  formBarang.as_p  }}
+        <button type='submit' class="save btn btn-default">Save</button>
+    </form>
+</div>
+
+
+
+{%  endblock %}
